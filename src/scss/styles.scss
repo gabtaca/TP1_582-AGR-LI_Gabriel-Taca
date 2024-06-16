@@ -1,0 +1,280 @@
+@import "bootstrap/scss/bootstrap.scss";
+@import "bootstrap/scss/_variables.scss";
+@import "bootstrap/scss/maps";
+
+
+@import url('https://fonts.googleapis.com/css2?family=Danfo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Danfo&family=Jaro:opsz@6..72&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
+//Colors
+$bg-primary: #6a3f14;
+$success: rgb(35, 161, 35);
+$secondary: #222;
+
+//Fonts
+$font-family: "Danfo", serif;
+$font-family-heading: "Jaro", sans-serif;
+$display-font-family: "Kanit", sans-serif;
+$font-family-heading: "Mouse Memoirs", sans-serif;
+$font-family: "Poetsen One", sans-serif;
+$font-family: "Spicy Rice", serif;
+
+//Animations
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 0% 82%
+    }
+
+    50% {
+        background-position: 100% 19%
+    }
+
+    100% {
+        background-position: 0% 82%
+    }
+}
+
+// Your custom styles
+body {
+    background-image: url('../assets/images/depositphotos_89734710-stock-illustration-cute-seamless-vector-pattern-with.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+    background-size: 600px 600px;
+}
+
+main {
+    min-width: 80vw;
+}
+
+.div__bar-src {
+    background-color: transparent;
+}
+
+.container {
+    min-height: 50vh;
+}
+
+.msg_hdr {
+    background-color: $orange-800;
+    background: linear-gradient(250deg, #c61010, #106cc6, #8147e1);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 6s ease infinite;
+    -moz-animation: AnimationName 6s ease infinite;
+    animation: AnimationName 6s ease infinite;
+}
+
+.icon__insta {
+    width: 30px;
+}
+
+.logo__mst {
+    display: flex;
+    height: 7rem;
+
+}
+
+.btn__rch {
+    font-family: "Poetsen One", sans-serif;
+    color: $orange-500;
+    background-color: $orange-100;
+}
+
+.counter {
+    top: 22.5rem;
+}
+
+.header__logo {
+    width: 100%;
+    font-family: "Lobster", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: $orange;
+}
+
+li {
+    background-color: $orange-300;
+    -webkit-box-shadow: inset -1px -1px 2px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 2px 1px rgba(255, 255, 255, 0.5);
+    box-shadow: inset -1px -1px 2px 1px rgba(0, 0, 0, 0.5), inset 1px 1px 2px 1px rgba(255, 255, 255, 0.5);
+}
+
+.article-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div__banner {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: rgb(230, 230, 229);
+    border: 2px $orange-300 solid;
+    border-radius: 30px;
+    padding-bottom: .5rem;
+}
+
+.txt__banner {
+    display: flex;
+    top: -2.5rem;
+    width: 120%;
+    left: -1.75rem;
+    color: #bc5500;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+    font-family: "Spicy Rice", serif;
+    font-style: normal;
+    font-weight: 400;
+    
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 10%;
+}
+
+.pic__banner{
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);
+}
+
+.btn__banner{
+    justify-content: center;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 15rem;
+    top:8rem;
+    right: -1.1rem;
+    font-weight: bolder;
+    font-size: medium;
+    padding: .9rem;
+    text-decoration: none;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);
+}
+
+footer {
+    display: flex;
+    height: 10rem;
+    width: 82%;
+    justify-content: space-evenly;
+    background-color: $orange-500;
+    -webkit-border-top-left-radius: 30px;
+    -webkit-border-top-right-radius: 30px;
+    -moz-border-radius-topleft: 30px;
+    -moz-border-radius-topright: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+
+    p {
+        align-self: center;
+        font-size: larger;
+        font-family: "Mouse Memoirs", sans-serif;
+    }
+}
+
+@media (min-width: 400px) {
+    .btn__banner{
+        width: 15rem;
+        top:9rem;
+        right: -2rem;
+        padding: .9rem;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42); 
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);
+    }
+}
+
+@media (min-width: 768px) {
+    .list-view .article-card {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .list-view .article-card picture {
+        flex: 1;
+        max-width: 150px;
+        margin-right: 20px;
+    }
+
+    .list-view .article-card .article-content {
+        flex: 2;
+        margin-right: 20px;
+    }
+
+    .list-view .article-card button {
+        flex: 1;
+    }
+    .txt__banner {
+        font-size: 1.75rem;
+    }
+    .btn__banner{
+        width: 15rem;
+        top:20.5rem;
+        right: -4rem;
+        padding: .9rem;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42); 
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);
+    }
+}
+
+@media (min-width: 1024px) {
+    .list-view .article-card picture {
+        max-width: 200px;
+    }
+
+    .txt__banner {
+        font-size: 2.25rem;
+    }
+
+    footer {
+        width: 95%;
+    }
+    .btn__banner{
+        width: 15rem;
+        top:26.5rem;
+        right: -7rem;
+        padding: .9rem;
+        -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42); 
+        box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.42);
+    }
+}

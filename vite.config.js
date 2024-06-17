@@ -1,16 +1,16 @@
-const path = require('path')
 import { defineConfig } from 'vite';
+const path = require('path');
 
-export default {
+export default defineConfig({
   root: path.resolve(__dirname, 'public'),
   server: {
     port: 8080,
-    hot: true,
-      build: {
-    outDir: 'dist', // Répertoire de sortie
+    hot: true
+  },
+  build: {
+    outDir: path.resolve(__dirname, 'dist'), 
     rollupOptions: {
-      input: 'index.html' // Fichier d'entrée pour Rollup
+      input: path.resolve(__dirname, 'public/index.html') 
     }
   }
-  }
-}
+});

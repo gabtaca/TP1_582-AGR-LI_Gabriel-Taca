@@ -1,9 +1,9 @@
-const path = require('path')
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-export default {
-  root: path.resolve(__dirname, 'public'),
-  server: {
-    port: 8080,
-    hot: true
+export default defineConfig({
+  plugins: [vue()],
+  build: {
+    outDir: 'dist' 
   }
-}
+});

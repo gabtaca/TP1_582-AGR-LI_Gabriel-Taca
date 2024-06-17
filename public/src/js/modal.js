@@ -17,7 +17,7 @@
      */
     var articles = [
         // Liste des objets article.
-        // Tout les objets contiennent un titre, une shortDescription, une fullDescription, et une imageUrl
+        // Tout les objets contiennent un titre, une shortDescription, une fullDescription et une imageUrl
         {
             title: 'WIKI',
             shortDescription: 'Wikipédia sur les moustaches.',
@@ -203,13 +203,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var viewSwitchLabel = document.querySelector('label[for="flexSwitchCheckDefault"] p');
     
     /**
-     * Inscrit les infos de mise en page d'origine pour la vue "mosaïque".
+     * Inscrit les infos d'origine pour la vue "mosaïque".
      * @type {string[]}
      */
     var originalArticlesHTML = [];
 
     /**
-     * Affiche les articles dans le conteneur avec les infos de mise en page spécifiées.
+     * Affiche les articles dans le conteneur avec les infos spécifiées.
      * @param {Object} article 
      * @param {number} index 
      */
@@ -237,8 +237,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     /**
-     * Gestionnaire d'événement pour afficher la description complète de l'article dans une fenêtre modale.
-     * @param {Event} event - L'événement de clic sur le conteneur des articles.
+     * 
+     * @param {Event} event - 
      */
     articleContainer.addEventListener('click', function(event) {
         if (event.target.matches('button.btn-primary')) {
@@ -269,8 +269,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     /**
-     * Met à jour le compteur d'articles trouvés.
-     * @param {number} count - Le nombre d'articles trouvés.
+     * 
+     * @param {number} count - 
      */
     function updateArticleCounter(count) {
         articleCounter.textContent = `${count} articles trouvés`;
@@ -299,13 +299,13 @@ document.addEventListener('DOMContentLoaded', function() {
         updateArticleCounter(foundCount);
     }
 
-    // Ajoute un écouteur d'événement pour filtrer les articles lorsque la valeur de saisie change.
+    // 
     searchInput.addEventListener('input', filterArticles);
-    // Filtrer les articles au chargement initial.
+    // 
     filterArticles();
 
     /**
-     * Bascule entre la vue liste et la vue mosaïque en fonction de l'état de l'interrupteur.
+     * 
      */
     viewSwitch.addEventListener('change', function() {
         var isChecked = viewSwitch.checked;
@@ -316,7 +316,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 card.classList.add('list-item');
             });
         } else {
-            // Restaure les informations de mise en page "mosaïque" d'origine
             articleContainer.innerHTML = originalArticlesHTML.join('');
             articleContainer.classList.remove('list-view');
             viewSwitchLabel.textContent = 'Mosaïque';
@@ -326,7 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Assure que la mise en page est correctement définie au chargement initial.
+    
     if (viewSwitch.checked) {
         articleContainer.classList.add('list-view');
         viewSwitchLabel.textContent = 'Liste';

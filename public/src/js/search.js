@@ -1,8 +1,11 @@
+/** Tout ce fichier est inutile */
+
 document.addEventListener('DOMContentLoaded', function() {
-    var searchInput = document.getElementById('searchInput');
+    const searchInput = document.getElementById('searchInput');
     if (searchInput) {
       searchInput.addEventListener('input', function() {
-        var inputValue = searchInput.value.toLowerCase();
+        const inputValue = searchInput.value.toLowerCase();
+        /** Console */
         console.log(inputValue);
       });
     } else {

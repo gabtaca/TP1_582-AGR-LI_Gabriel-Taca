@@ -171,42 +171,42 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    
+    /** Nous ne devrions plus utiliser var */
     /**
      * Conteneur pour les articles affichés.
      * @type {HTMLElement}
      */
-    var articleContainer = document.getElementById('articleContainer');
+    const articleContainer = document.getElementById('articleContainer');
     
     /**
      * Champ de saisie pour la recherche dans les articles.
      * @type {HTMLInputElement}
      */
-    var searchInput = document.getElementById('searchInput');
+    const searchInput = document.getElementById('searchInput');
     
     /**
      * Élément affichant le compteur du nombre d'articles trouvés.
      * @type {HTMLElement}
      */
-    var articleCounter = document.getElementById('articleCounter');
+    const articleCounter = document.getElementById('articleCounter');
     
     /**
      * Interrupteur pour switch entre la vue liste et la vue mosaïque.
      * @type {HTMLInputElement}
      */
-    var viewSwitch = document.getElementById('flexSwitchCheckDefault');
+    const viewSwitch = document.getElementById('flexSwitchCheckDefault');
     
     /**
      * 
      * @type {HTMLElement}
      */
-    var viewSwitchLabel = document.querySelector('label[for="flexSwitchCheckDefault"] p');
+    const viewSwitchLabel = document.querySelector('label[for="flexSwitchCheckDefault"] p');
     
     /**
      * Inscrit les infos d'origine pour la vue "mosaïque".
      * @type {string[]}
      */
-    var originalArticlesHTML = [];
+    const originalArticlesHTML = [];
 
     /**
      * Affiche les articles dans le conteneur avec les infos spécifiées.
@@ -218,6 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
         col.className = 'col-12 col-md-6 col-lg-4 article-card p-3 bg-warning-subtle border border-3 border-warning rounded-3 shadow';
         col.setAttribute('data-title', article.title.toLowerCase());
         col.setAttribute('data-description', article.shortDescription.toLowerCase());
+        /** la demonstation est faite mais l'image ne change pas de format. Le contexte dans lequel est demontré la technique n'est pas la bonne. L'image est deja petite parce nous sommes dans un carte. L'ordre des sources n'est pas la bonne. */
         col.innerHTML = `
             <picture>
                 <source media="(max-width: 685px)" srcset="${article.imageUrl}?w=150">
@@ -334,9 +335,10 @@ document.addEventListener('DOMContentLoaded', function() {
         viewSwitchLabel.textContent = 'Mosaïque';
     }
 
+    /** js doc inutile */
+
     /**
      * Gère l'événement de fermeture de l'élément offcanvas pour supprimer la superposition.
-     * @param {Event} event - L'événement hidden.bs.offcanvas.
      */
     var offcanvasElement = document.getElementById('offcanvas');
     offcanvasElement.addEventListener('hidden.bs.offcanvas', function () {
@@ -346,9 +348,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    /** js doc inutile */
+
     /**
      * Gère les clics en dehors de l'élément offcanvas pour le fermer.
-     * @param {Event} event - L'événement de clic sur le document.
      */
     document.addEventListener('click', function(event) {
         var offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvas'));
